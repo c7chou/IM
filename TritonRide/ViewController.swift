@@ -12,7 +12,11 @@ import CoreLocation
 import GoogleMaps
 
 class ViewController: UIViewController {
-
+    var placesClient: GMSPlacesClient?
+    var placePicker: GMSPlacePicker?
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

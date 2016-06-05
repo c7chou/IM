@@ -28,4 +28,7 @@ class rideDriverViewController: UITableViewController {
             cell.driver = driver
             return cell
     }
+    @IBAction func cancelDriver(segue:UIStoryboardSegue) {
+        
+    }
 }
