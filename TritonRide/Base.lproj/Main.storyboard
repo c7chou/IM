@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -139,6 +140,259 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnK-tG-pit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1168.5" y="479.5"/>
+        </scene>
+        <!--Triton Ride-->
+        <scene sceneID="o5O-4F-jYa">
+            <objects>
+                <viewController id="LHm-HX-7OT" customClass="LocationViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ZO-fi-TxA"/>
+                        <viewControllerLayoutGuide type="bottom" id="c9G-mK-oh4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bjo-Fb-vRW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-GG-CPw">
+                                <rect key="frame" x="8" y="144" width="359" height="453"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzE-zg-PCf">
+                                <rect key="frame" x="16" y="617" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ufH-F1-lw7"/>
+                                </constraints>
+                                <state key="normal" title="Get Ride">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickPlace:" destination="LHm-HX-7OT" eventType="touchUpInside" id="tBN-TF-Dnr"/>
+                                    <action selector="pickPlace:" destination="BCn-Uo-ZER" eventType="touchUpInside" id="y2I-dr-fz5"/>
+                                    <segue destination="aCY-kP-VYN" kind="presentation" id="Otf-zb-hFf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xht-5A-obF">
+                                <rect key="frame" x="16" y="72" width="343" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8540 Costa Verde Blavd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhO-E5-sh1">
+                                        <rect key="frame" x="78" y="21" width="186" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IhO-E5-sh1" firstAttribute="leading" secondItem="Xht-5A-obF" secondAttribute="leading" constant="78" id="MGO-0B-vpD"/>
+                                    <constraint firstItem="IhO-E5-sh1" firstAttribute="top" secondItem="Xht-5A-obF" secondAttribute="top" constant="21" id="N4I-q6-r6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="IhO-E5-sh1" secondAttribute="trailing" constant="79" id="g7N-G1-5Kh"/>
+                                    <constraint firstAttribute="height" constant="64" id="pdt-QY-PHH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xht-5A-obF" secondAttribute="trailing" id="3S3-sj-39V"/>
+                            <constraint firstItem="Xht-5A-obF" firstAttribute="leading" secondItem="Bjo-Fb-vRW" secondAttribute="leadingMargin" id="4rQ-wq-kEl"/>
+                            <constraint firstItem="nGJ-GG-CPw" firstAttribute="leading" secondItem="Bjo-Fb-vRW" secondAttribute="leadingMargin" constant="-8" id="5Al-96-cR4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nGJ-GG-CPw" secondAttribute="trailing" constant="-8" id="5b8-7G-3yK"/>
+                            <constraint firstItem="nGJ-GG-CPw" firstAttribute="leading" secondItem="Bjo-Fb-vRW" secondAttribute="leadingMargin" constant="-8" id="7yf-3f-nBX"/>
+                            <constraint firstItem="c9G-mK-oh4" firstAttribute="top" secondItem="nGJ-GG-CPw" secondAttribute="bottom" constant="70" id="C8w-Dn-ZUK"/>
+                            <constraint firstItem="nGJ-GG-CPw" firstAttribute="leading" secondItem="Bjo-Fb-vRW" secondAttribute="leadingMargin" constant="-8" id="EdB-mD-bp8"/>
+                            <constraint firstItem="Xht-5A-obF" firstAttribute="top" secondItem="1ZO-fi-TxA" secondAttribute="bottom" id="PRH-s1-Mw6"/>
+                            <constraint firstItem="nGJ-GG-CPw" firstAttribute="leading" secondItem="Bjo-Fb-vRW" secondAttribute="leadingMargin" constant="-8" id="S6k-QP-lha"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bzE-zg-PCf" secondAttribute="trailing" id="Tva-oP-9dk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nGJ-GG-CPw" secondAttribute="trailing" constant="-8" id="Xk3-5x-ua2"/>
+                            <constraint firstItem="nGJ-GG-CPw" firstAttribute="top" secondItem="1ZO-fi-TxA" secondAttribute="bottom" constant="80" id="ZC0-Tz-2IN"/>
+                            <constraint firstItem="c9G-mK-oh4" firstAttribute="top" secondItem="bzE-zg-PCf" secondAttribute="bottom" id="gyf-Wh-lB1"/>
+                            <constraint firstItem="bzE-zg-PCf" firstAttribute="leading" secondItem="Bjo-Fb-vRW" secondAttribute="leadingMargin" id="iqP-LB-uP6"/>
+                            <constraint firstItem="c9G-mK-oh4" firstAttribute="top" secondItem="nGJ-GG-CPw" secondAttribute="bottom" constant="70" id="kFY-JJ-Qw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nGJ-GG-CPw" secondAttribute="trailing" constant="-8" id="rBu-SB-H1R"/>
+                            <constraint firstItem="nGJ-GG-CPw" firstAttribute="top" secondItem="1ZO-fi-TxA" secondAttribute="bottom" constant="80" id="u6w-dh-iHW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nGJ-GG-CPw" secondAttribute="trailing" constant="-8" id="ztB-1j-fr3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Triton Ride" id="ZlS-dW-tVQ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address" destination="IhO-E5-sh1" id="i7F-yc-f12"/>
+                        <outlet property="mapView" destination="nGJ-GG-CPw" id="PR7-bh-smS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCn-Uo-ZER" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858.5" y="-430.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="slr-wf-1ms">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7XU-j4-3rc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lGI-ld-hCu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LHm-HX-7OT" kind="relationship" relationship="rootViewController" id="moH-DX-hqa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6N-mu-a9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358.5" y="-436.5"/>
+        </scene>
+        <!--Triton Ride-->
+        <scene sceneID="LDJ-Y8-6MN">
+            <objects>
+                <tableViewController id="tOi-Nh-Lhg" customClass="rideTimeViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SFh-NL-nj1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="timeCell" textLabel="LrG-yd-T13" style="IBUITableViewCellStyleDefault" id="r9k-nn-anx">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r9k-nn-anx" id="xEI-KD-gOP">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LrG-yd-T13">
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="NgG-jC-yKh" kind="presentation" id="45I-JQ-caF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tOi-Nh-Lhg" id="4Am-LS-nIr"/>
+                            <outlet property="delegate" destination="tOi-Nh-Lhg" id="bqS-qA-aWY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Triton Ride" id="Y7R-ou-3be">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="R3R-7x-G1r">
+                            <connections>
+                                <action selector="cancelGetRide:" destination="CPT-WG-KtJ" id="hcv-UI-PV9"/>
+                                <segue destination="1Ve-3R-MEs" kind="unwind" unwindAction="cancelGetRide:" id="qbT-oa-iVk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPT-WG-KtJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Ve-3R-MEs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1813.5" y="-430.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T3P-cO-LUJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aCY-kP-VYN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ihQ-8Z-LhS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tOi-Nh-Lhg" kind="relationship" relationship="rootViewController" id="Cm8-uf-pH6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvl-vW-ajZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332.5" y="-430.5"/>
+        </scene>
+        <!--TritonRide-->
+        <scene sceneID="y9J-hs-ZMw">
+            <objects>
+                <tableViewController id="P78-ax-gKO" customClass="rideDriverViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="1k3-Lb-ano">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="driverCell" rowHeight="60" id="g9A-vM-J2l" customClass="driverCell" customModule="TritonRide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9A-vM-J2l" id="AmC-eq-FFm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-cx-ZqU">
+                                            <rect key="frame" x="296" y="24" width="55" height="30"/>
+                                            <state key="normal" title="Sign Up"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7E-Os-8gp">
+                                            <rect key="frame" x="14" y="31" width="100" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsj-ZC-cdj">
+                                            <rect key="frame" x="14" y="2" width="100" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqX-UV-B8K">
+                                            <rect key="frame" x="296" y="2" width="71" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="rsj-ZC-cdj" id="Aza-OQ-Gwi"/>
+                                    <outlet property="plateLabel" destination="P7E-Os-8gp" id="bEF-7o-7S6"/>
+                                    <outlet property="spotLabel" destination="mqX-UV-B8K" id="v4B-h1-G3B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P78-ax-gKO" id="XSO-lh-keE"/>
+                            <outlet property="delegate" destination="P78-ax-gKO" id="f2C-bq-P7Z"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="TritonRide" id="QPz-1Y-KX2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="CX0-3m-plB"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOC-PW-sPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790.5" y="-430.5"/>
+        </scene>
+        <!--Players-->
+        <scene sceneID="Pjs-4Q-Yor">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgG-jC-yKh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Players" image="Players" id="MDj-ef-GQ9"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1YX-ds-o0S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P78-ax-gKO" kind="relationship" relationship="rootViewController" id="P04-qm-lmK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2p-47-BZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298.5" y="-430.5"/>
         </scene>
     </scenes>
     <resources>
