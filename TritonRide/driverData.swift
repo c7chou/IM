@@ -10,13 +10,13 @@ import UIKit
 
 
 
-let driverData = [
-    rideDriver( name: "Jerry", plate:"6YYF096", spotAvail: 5 ),
-    rideDriver( name: "Eric", plate:"7UYH897", spotAvail: 5 ),
-    rideDriver( name: "Angel", plate:"9JIK125", spotAvail: 1 ),
-    rideDriver( name: "Catherine", plate:"5JKE498", spotAvail: 4 ),
-    rideDriver( name: "Rasy", plate:"3MDIE293", spotAvail: 4 ),
-    rideDriver( name: "Ivy", plate:"7DJW385", spotAvail: 3 ),
+let postData = [
+    ridePost( name: "Jerry", plate:"6YYF096", spotAvail: 5, time:"11:45" ),
+    ridePost( name: "Eric", plate:"7UYH897", spotAvail: 5, time:"11:45" ),
+    ridePost( name: "Angel", plate:"9JIK125", spotAvail: 1, time:"11:45"  ),
+    ridePost( name: "Catherine", plate:"5JKE498", spotAvail: 4, time:"11:45"  ),
+    ridePost( name: "Rasy", plate:"3MDIE293", spotAvail: 4, time:"11:45"  ),
+    ridePost( name: "Ivy", plate:"7DJW385", spotAvail: 3, time:"11:45"  ),
 
 ]
 
