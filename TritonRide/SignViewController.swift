@@ -13,25 +13,23 @@ import FirebaseAuth
 class SignUpViewController: UIViewController {
     
     // MARK: Outlets
-    
+
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var txtConfirmPassword: UITextField!
-
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-    
-        
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+   
     func isValidEmail(testStr:String) -> Bool {
         // println("validate calendar: \(testStr)")
         let emailRegEx = "[A-Z0-9a-z._%+-]+@ucsd.edu"
@@ -40,17 +38,15 @@ class SignUpViewController: UIViewController {
         return emailTest.evaluateWithObject(testStr)
     }
     
-
-    
     /*
-     func didSignup(){
-     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-     
-     let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("loginView") as NextViewController
-     self.presentViewController(nextViewController, animated:true, completion:nil)
-     }*/
+    func didSignup(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("loginView") as NextViewController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
+    }*/
     // MARK: Signups
-    @IBAction func signUpTapped(sender: AnyObject) {
+    @IBAction func signupTapped(sender: UIButton) {
         let username:String = txtUsername.text!
         let password:String = txtPassword.text!
         let confirmPassword:String = txtConfirmPassword.text!
@@ -69,38 +65,33 @@ class SignUpViewController: UIViewController {
         } else {
             let email = username
             let password = password
-            self.activityIndicator.startAnimating()
             FIRAuth.auth()?.createUserWithEmail(email, password: password) { (user, error) in
-                self.activityIndicator.stopAnimating()
                 if let error = error {
                     print(error.localizedDescription)
-                    let alertController:UIAlertController = UIAlertController(title: "Sign Up Failed",message: error.localizedDescription , preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: .Default , handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
                     return
                 }
                 let successAlertController:UIAlertController = UIAlertController(title: "Sign Up Successfully", message: "Enjoy", preferredStyle: .Alert)
-                successAlertController.addAction(UIAlertAction(title: "OK", style: .Default , handler:{ action in self.performSegueWithIdentifier("LoginViewSegue", sender: self)}))
+                successAlertController.addAction(UIAlertAction(title: "OK", style: .Default , handler: nil))
                 self.presentViewController (successAlertController, animated: true, completion: nil)
             }
         }
     }
-      
+    
+  
     
     
     
-    
-    
+
     /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     segue.destinationViewController = LoginViewController
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        segue.destinationViewController = LoginViewController
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+ */
     
-    
+
 }
