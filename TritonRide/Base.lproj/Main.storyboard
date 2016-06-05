@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7XU-j4-3rc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fhw-g5-0T6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -69,7 +69,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="JWh-tM-f7l">
             <objects>
-                <viewController storyboardIdentifier="SignupView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NGc-YZ-HnW" customClass="SignUpViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="NGc-YZ-HnW" customClass="SignUpViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DQB-ps-q71"/>
                         <viewControllerLayoutGuide type="bottom" id="UVj-DK-rKE"/>
@@ -132,7 +132,6 @@
                         <color key="backgroundColor" red="0.083610016600000003" green="0.4041990318" blue="1" alpha="0.8726174645" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="txtConfirmPassword" destination="650-xe-dVk" id="LL7-w6-3Kh"/>
                         <outlet property="txtPassword" destination="rze-UR-EBs" id="UA4-FX-YNl"/>
                         <outlet property="txtUsername" destination="9wf-8Y-rxV" id="Pi9-Qw-886"/>
                     </connections>
@@ -371,7 +370,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="CX0-3m-plB">
                             <connections>
                                 <action selector="cancelDriver:" destination="JOC-PW-sPq" id="s8Q-hU-c55"/>
-                                <segue destination="fb1-wd-eIx" kind="unwind" unwindAction="cancelDriver:" id="XYu-mF-83D"/>
+                                <segue destination="fb1-wd-eIx" kind="unwind" unwindAction="cancelDriver:" id="7Ro-8w-haw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -403,6 +402,253 @@
             </objects>
             <point key="canvasLocation" x="2298.5" y="-430.5"/>
         </scene>
+        <!--Triton Ride-->
+        <scene sceneID="dXD-3s-MAD">
+            <objects>
+                <viewController id="lC6-TQ-SjV" customClass="LocationViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m1g-HC-kw2"/>
+                        <viewControllerLayoutGuide type="bottom" id="YNX-dU-LO3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zUN-Q4-Mw0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-Wr-6fX">
+                                <rect key="frame" x="8" y="144" width="359" height="453"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEH-c8-EaD">
+                                <rect key="frame" x="16" y="617" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FtS-Me-ubv"/>
+                                </constraints>
+                                <state key="normal" title="Post Ride">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickPlace:" destination="w5Q-zT-eBI" eventType="touchUpInside" id="6hw-js-FhI"/>
+                                    <action selector="pickPlace:" destination="lC6-TQ-SjV" eventType="touchUpInside" id="puc-Pc-mfz"/>
+                                    <segue destination="cti-o6-TmW" kind="presentation" id="YhF-z9-ftb"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-To-IG3">
+                                <rect key="frame" x="16" y="72" width="343" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8540 Costa Verde Blavd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnr-Sr-yfh">
+                                        <rect key="frame" x="78" y="21" width="186" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tnr-Sr-yfh" secondAttribute="trailing" constant="79" id="7lP-Xo-xeK"/>
+                                    <constraint firstAttribute="height" constant="64" id="WvG-25-bge"/>
+                                    <constraint firstItem="tnr-Sr-yfh" firstAttribute="leading" secondItem="LQc-To-IG3" secondAttribute="leading" constant="78" id="sKu-cj-Rmw"/>
+                                    <constraint firstItem="tnr-Sr-yfh" firstAttribute="top" secondItem="LQc-To-IG3" secondAttribute="top" constant="21" id="zTw-1b-2ro"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="HMw-Wr-6fX" secondAttribute="trailing" constant="-8" id="0BK-NP-VeB"/>
+                            <constraint firstItem="HMw-Wr-6fX" firstAttribute="leading" secondItem="zUN-Q4-Mw0" secondAttribute="leadingMargin" constant="-8" id="1bb-DN-qgo"/>
+                            <constraint firstItem="YNX-dU-LO3" firstAttribute="top" secondItem="HMw-Wr-6fX" secondAttribute="bottom" constant="70" id="51N-Ws-JxE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LQc-To-IG3" secondAttribute="trailing" id="Ezu-Dx-fk1"/>
+                            <constraint firstItem="YNX-dU-LO3" firstAttribute="top" secondItem="pEH-c8-EaD" secondAttribute="bottom" id="GiI-xF-kqt"/>
+                            <constraint firstItem="pEH-c8-EaD" firstAttribute="leading" secondItem="zUN-Q4-Mw0" secondAttribute="leadingMargin" id="Iaz-TF-wIi"/>
+                            <constraint firstItem="HMw-Wr-6fX" firstAttribute="top" secondItem="m1g-HC-kw2" secondAttribute="bottom" constant="80" id="JAz-Nx-fpq"/>
+                            <constraint firstItem="HMw-Wr-6fX" firstAttribute="leading" secondItem="zUN-Q4-Mw0" secondAttribute="leadingMargin" constant="-8" id="Jvp-G5-7xf"/>
+                            <constraint firstItem="LQc-To-IG3" firstAttribute="leading" secondItem="zUN-Q4-Mw0" secondAttribute="leadingMargin" id="NkU-Kz-9iB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HMw-Wr-6fX" secondAttribute="trailing" constant="-8" id="Ns9-li-Y4c"/>
+                            <constraint firstItem="HMw-Wr-6fX" firstAttribute="leading" secondItem="zUN-Q4-Mw0" secondAttribute="leadingMargin" constant="-8" id="PJu-Px-edy"/>
+                            <constraint firstItem="YNX-dU-LO3" firstAttribute="top" secondItem="HMw-Wr-6fX" secondAttribute="bottom" constant="70" id="Rdh-Je-bjs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pEH-c8-EaD" secondAttribute="trailing" id="SLz-FU-pou"/>
+                            <constraint firstItem="HMw-Wr-6fX" firstAttribute="top" secondItem="m1g-HC-kw2" secondAttribute="bottom" constant="80" id="SWR-2l-SQU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HMw-Wr-6fX" secondAttribute="trailing" constant="-8" id="Xpb-Nh-TgC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HMw-Wr-6fX" secondAttribute="trailing" constant="-8" id="i2z-ai-i3x"/>
+                            <constraint firstItem="LQc-To-IG3" firstAttribute="top" secondItem="m1g-HC-kw2" secondAttribute="bottom" id="nZc-1e-9OA"/>
+                            <constraint firstItem="HMw-Wr-6fX" firstAttribute="leading" secondItem="zUN-Q4-Mw0" secondAttribute="leadingMargin" constant="-8" id="quK-FX-vpR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Triton Ride" id="UFe-7Q-1Al"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="address" destination="tnr-Sr-yfh" id="zif-s6-LI3"/>
+                        <outlet property="mapView" destination="HMw-Wr-6fX" id="LVY-Nb-cLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5Q-zT-eBI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874.5" y="-1454.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AJx-zo-mPj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhw-g5-0T6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ye7-VU-xzE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lC6-TQ-SjV" kind="relationship" relationship="rootViewController" id="zm6-lf-umc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Itc-e1-rLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374.5" y="-1460.5"/>
+        </scene>
+        <!--Triton Ride-->
+        <scene sceneID="083-qi-zCC">
+            <objects>
+                <tableViewController id="54o-MH-cbR" customClass="ridePostViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lwJ-26-Av4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Spots Available" id="Jos-Kj-8bP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Akx-By-LkM">
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Akx-By-LkM" id="hfX-C8-5K0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeW-Z8-qLE">
+                                                    <rect key="frame" x="8" y="5" width="359" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Time" id="19e-aj-2ba">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ajb-dd-GXC">
+                                        <rect key="frame" x="0.0" y="207.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ajb-dd-GXC" id="lQ6-Ir-OJb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick up Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tU-nF-WAg">
+                                                    <rect key="frame" x="15" y="11" width="278" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="238" id="nyY-ci-IZl">
+                                        <rect key="frame" x="0.0" y="251.5" width="375" height="238"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nyY-ci-IZl" id="Lq3-yH-CNb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="237.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VNs-jS-uSM">
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="216"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="486852689.13689101">
+                                                        <!--2016-06-05 20:51:29 +0000-->
+                                                    </date>
+                                                    <connections>
+                                                        <action selector="datePickerValue:" destination="54o-MH-cbR" eventType="valueChanged" id="HKe-iv-p4Q"/>
+                                                        <action selector="datePickerValue:" destination="biO-ba-qhw" eventType="valueChanged" id="arq-TV-3Cl"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="54o-MH-cbR" id="iwz-7i-9T1"/>
+                            <outlet property="delegate" destination="54o-MH-cbR" id="Jxk-Jl-Iij"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Triton Ride" id="Rj9-Uy-S6S">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0I7-ek-day">
+                            <connections>
+                                <action selector="cancelPostView:" destination="biO-ba-qhw" id="3N3-ZC-M4k"/>
+                                <segue destination="DyX-z6-dLZ" kind="unwind" identifier="ridePost" unwindAction="cancelPostView:" id="JXc-vy-3YW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="D9B-Xr-v7j">
+                            <connections>
+                                <action selector="savePostDetail:" destination="biO-ba-qhw" id="GIi-ov-0Jj"/>
+                                <segue destination="lC6-TQ-SjV" kind="presentation" id="SG1-8F-chJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="VNs-jS-uSM" id="SyX-j7-sjH"/>
+                        <outlet property="spotField" destination="JeW-Z8-qLE" id="EPL-p2-eZR"/>
+                        <outlet property="timeLabel" destination="3tU-nF-WAg" id="SJR-nd-TiE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biO-ba-qhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DyX-z6-dLZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1941.5" y="-1446.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wgt-Y1-yVV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cti-o6-TmW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hcz-j8-8Hr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="54o-MH-cbR" kind="relationship" relationship="rootViewController" id="wsb-ZX-raX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Od4-Ox-oY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390.5" y="-1446.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IRm-AQ-VYD">
+            <objects>
+                <viewController id="gjQ-rm-n8U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fxr-uH-K66"/>
+                        <viewControllerLayoutGuide type="bottom" id="tBU-Bw-OWa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SqP-tX-01n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yJF-Dc-AIg">
+                                <rect key="frame" x="0.0" y="75" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="486850970.84646797">
+                                    <!--2016-06-05 20:22:50 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xo-GR-lTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2463.5" y="-1446.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Players" width="30" height="30"/>
@@ -410,5 +656,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gdt-Ol-PzA"/>
+        <segue reference="SG1-8F-chJ"/>
     </inferredMetricsTieBreakers>
 </document>

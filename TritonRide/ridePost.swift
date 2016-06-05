@@ -8,15 +8,17 @@
 
 import UIKit
 
-struct rideDriver{
+struct ridePost{
     
     var name: String?
     var plate: String?
     var spotAvail: Int?
+    var time: String?
     
-    init(name: String?, plate: String?, spotAvail:Int) {
+    init(name: String?, plate: String?, spotAvail:Int, time:String) {
         self.name = name
         self.plate = plate
         self.spotAvail = spotAvail
+        self.time = time
     }
 }

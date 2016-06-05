@@ -9,14 +9,14 @@
 import UIKit
 
 class rideDriverViewController: UITableViewController {
-    var drivers:[rideDriver] = driverData
+    var ridePosts:[ridePost] = postData
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drivers.count
+        return ridePosts.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
@@ -24,7 +24,7 @@ class rideDriverViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("driverCell", forIndexPath: indexPath)
                 as! driverCell
             
-            let driver = drivers[indexPath.row] as rideDriver
+            let driver = ridePosts[indexPath.row] as ridePost
             cell.driver = driver
             return cell
     }

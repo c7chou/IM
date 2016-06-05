@@ -13,7 +13,7 @@ class driverCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var spotLabel: UILabel!
 
-    var driver: rideDriver! {
+    var driver: ridePost! {
         didSet {
             plateLabel.text = driver.plate
             nameLabel.text = driver.name
