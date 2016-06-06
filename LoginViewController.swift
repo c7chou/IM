@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     var pickerData:[String] = ["Driver", "Rider"]
     var ref = FIRDatabase.database().reference()
-    var pickerValue:String
+    var pickerValue:String = ""
 
 
     override func viewDidLoad() {
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
 
     func pickerView(picker: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        if(row = 0){
+        if(row == 0){
             self.pickerValue = pickerData[0]
         } else{
             self.pickerValue = pickerData[1]
