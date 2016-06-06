@@ -14,6 +14,7 @@ class ridePostViewController: UITableViewController {
     @IBOutlet weak var spotField: UITextField!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     var posts: ridePost?
     
     override func viewDidLoad() {
@@ -33,7 +34,7 @@ class ridePostViewController: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.stringFromDate(time)
         
-        let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
+        //let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
         //let ref = FIRDatabase.database().reference().child("ridePost").child("time").setValue(spots)
         //ref.setValue(dict)
         // Write data to Firebase
