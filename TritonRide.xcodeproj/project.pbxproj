@@ -13,7 +13,6 @@
 		352FDCDC1D040B62004AF677 /* rideTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCD81D040B62004AF677 /* rideTimeViewController.swift */; };
 		352FDCDD1D040B62004AF677 /* rideDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCD91D040B62004AF677 /* rideDriverViewController.swift */; };
 		352FDCDE1D040B62004AF677 /* driverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCDA1D040B62004AF677 /* driverData.swift */; };
-		352FDCDF1D040B62004AF677 /* ridePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCDB1D040B62004AF677 /* ridePost.swift */; };
 		352FDCE31D040BF5004AF677 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCE21D040BF5004AF677 /* LocationViewController.swift */; };
 		352FDCE61D040BFB004AF677 /* timeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCE41D040BFB004AF677 /* timeData.swift */; };
 		352FDCE71D040BFB004AF677 /* rideTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCE51D040BFB004AF677 /* rideTime.swift */; };
@@ -21,7 +20,6 @@
 		653E696A1D04C6C400007AA9 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E69691D04C6C400007AA9 /* CurrentUser.swift */; };
 		657E026F1D04A72500376D8F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E026E1D04A72500376D8F /* SignUpViewController.swift */; };
 		65D193691D04001D0071E3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D193681D04001D0071E3A9 /* AppDelegate.swift */; };
-		65D1936B1D04001D0071E3A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1936A1D04001D0071E3A9 /* ViewController.swift */; };
 		65D1936E1D04001D0071E3A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1936C1D04001D0071E3A9 /* Main.storyboard */; };
 		65D193711D04001D0071E3A9 /* TritonRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65D1936F1D04001D0071E3A9 /* TritonRide.xcdatamodeld */; };
 		65D193731D04001D0071E3A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D193721D04001D0071E3A9 /* Assets.xcassets */; };
@@ -37,7 +35,6 @@
 		352FDCD81D040B62004AF677 /* rideTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rideTimeViewController.swift; sourceTree = "<group>"; };
 		352FDCD91D040B62004AF677 /* rideDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rideDriverViewController.swift; sourceTree = "<group>"; };
 		352FDCDA1D040B62004AF677 /* driverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverData.swift; sourceTree = "<group>"; };
-		352FDCDB1D040B62004AF677 /* ridePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ridePost.swift; sourceTree = "<group>"; };
 		352FDCE01D040BCC004AF677 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		352FDCE21D040BF5004AF677 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		352FDCE41D040BFB004AF677 /* timeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeData.swift; sourceTree = "<group>"; };
@@ -49,7 +46,6 @@
 		657E026E1D04A72500376D8F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		65D193651D04001D0071E3A9 /* TritonRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TritonRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D193681D04001D0071E3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65D1936A1D04001D0071E3A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65D1936D1D04001D0071E3A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65D193701D04001D0071E3A9 /* TritonRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TritonRide.xcdatamodel; sourceTree = "<group>"; };
 		65D193721D04001D0071E3A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,10 +108,8 @@
 				352FDCD91D040B62004AF677 /* rideDriverViewController.swift */,
 				352FDCDA1D040B62004AF677 /* driverData.swift */,
 				352FDCE21D040BF5004AF677 /* LocationViewController.swift */,
-				352FDCDB1D040B62004AF677 /* ridePost.swift */,
 				352FDCE41D040BFB004AF677 /* timeData.swift */,
 				352FDCE51D040BFB004AF677 /* rideTime.swift */,
-				65D1936A1D04001D0071E3A9 /* ViewController.swift */,
 				653E69671D04C32A00007AA9 /* LoginViewController.swift */,
 				657E026E1D04A72500376D8F /* SignUpViewController.swift */,
 				65D1936C1D04001D0071E3A9 /* Main.storyboard */,
@@ -266,9 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				352FDCDD1D040B62004AF677 /* rideDriverViewController.swift in Sources */,
-				65D1936B1D04001D0071E3A9 /* ViewController.swift in Sources */,
 				352FDCDC1D040B62004AF677 /* rideTimeViewController.swift in Sources */,
-				352FDCDF1D040B62004AF677 /* ridePost.swift in Sources */,
 				352FDCDE1D040B62004AF677 /* driverData.swift in Sources */,
 				65D193691D04001D0071E3A9 /* AppDelegate.swift in Sources */,
 				657E026F1D04A72500376D8F /* SignUpViewController.swift in Sources */,

@@ -35,7 +35,7 @@ class ridePostViewController: UITableViewController {
         let dateString = dateFormatter.stringFromDate(time)
         
         let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
-        let ref = FIRDatabase.database().reference().child("tritonride/ridePost")
+        let ref = FIRDatabase.database().reference().child("ridePost")
         ref.setValue(dict)
         // Write data to Firebase
         /*if let postViewController = segue.sourceViewController as? ridePostViewController {
