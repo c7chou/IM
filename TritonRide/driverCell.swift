@@ -17,11 +17,9 @@ class driverCell: UITableViewCell {
         didSet {
             plateLabel.text = driver.plate
             nameLabel.text = driver.name
-            
             let x:Int = driver.spotAvail!
             let spots = String(x)
             spotLabel.text = "Spots: "+spots
-
         }
     }
 }

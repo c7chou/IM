@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import Firebase
 class ridePostViewController: UITableViewController {
     var ridePosts:[ridePost] = postData
+
     @IBOutlet weak var spotField: UITextField!
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -26,8 +27,18 @@ class ridePostViewController: UITableViewController {
     }
     @IBAction func cancelPostView(segue:UIStoryboardSegue) {
     }
-    @IBAction func savePostDetail(segue:UIStoryboardSegue) {
-        if let postViewController = segue.sourceViewController as? ridePostViewController {
+    @IBAction func savePostDetail(sender:UIButton) {
+        let spots = spotField.text
+        let time = datePicker.date
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.stringFromDate(time)
+        
+        let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
+        let ref = FIRDatabase.database().reference().child("tritonride/ridePost")
+        ref.setValue(dict)
+        // Write data to Firebase
+        /*if let postViewController = segue.sourceViewController as? ridePostViewController {
             
             //add the new player to the players array
             if let ridePost = postViewController.posts{
@@ -38,7 +49,7 @@ class ridePostViewController: UITableViewController {
                 let indexPath = NSIndexPath(forRow: ridePosts.count-1, inSection: 0)
                 tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
-        }
+        }*/
     }
 
     func datePickerChanged () {

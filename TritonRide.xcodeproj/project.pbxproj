@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34243DC21F90A45C5ABE763B /* Pods_TritonRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F767215B22B11528C6B82495 /* Pods_TritonRide.framework */; };
+		352764591D05EB7C00F5BD2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352764581D05EB7C00F5BD2E /* Constants.swift */; };
 		352FDCD71D040B56004AF677 /* driverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCD61D040B56004AF677 /* driverCell.swift */; };
 		352FDCDC1D040B62004AF677 /* rideTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCD81D040B62004AF677 /* rideTimeViewController.swift */; };
 		352FDCDD1D040B62004AF677 /* rideDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCD91D040B62004AF677 /* rideDriverViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0195B9DA7A8EB875E49F992B /* Pods-TritonRide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TritonRide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TritonRide/Pods-TritonRide.debug.xcconfig"; sourceTree = "<group>"; };
+		352764581D05EB7C00F5BD2E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		352FDCD61D040B56004AF677 /* driverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverCell.swift; sourceTree = "<group>"; };
 		352FDCD81D040B62004AF677 /* rideTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rideTimeViewController.swift; sourceTree = "<group>"; };
 		352FDCD91D040B62004AF677 /* rideDriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rideDriverViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				65D1936A1D04001D0071E3A9 /* ViewController.swift */,
 				65D193851D0409D90071E3A9 /* LoginViewController.swift */,
 				65D1936C1D04001D0071E3A9 /* Main.storyboard */,
+				352764581D05EB7C00F5BD2E /* Constants.swift */,
 				354F411E1D04AF3700DB5375 /* ridePostViewController.swift */,
 				65D193831D0409210071E3A9 /* SignUpViewController.swift */,
 				65D193721D04001D0071E3A9 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				354F411F1D04AF3700DB5375 /* ridePostViewController.swift in Sources */,
 				352FDCE71D040BFB004AF677 /* rideTime.swift in Sources */,
 				65D193711D04001D0071E3A9 /* TritonRide.xcdatamodeld in Sources */,
+				352764591D05EB7C00F5BD2E /* Constants.swift in Sources */,
 				352FDCE61D040BFB004AF677 /* timeData.swift in Sources */,
 				352FDCD71D040B56004AF677 /* driverCell.swift in Sources */,
 			);

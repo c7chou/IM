@@ -584,11 +584,16 @@
                                 <segue destination="DyX-z6-dLZ" kind="unwind" identifier="ridePost" unwindAction="cancelPostView:" id="JXc-vy-3YW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="D9B-Xr-v7j">
-                            <connections>
-                                <action selector="savePostDetail:" destination="biO-ba-qhw" id="GIi-ov-0Jj"/>
-                                <segue destination="lC6-TQ-SjV" kind="presentation" id="SG1-8F-chJ"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="JHM-uF-k3w">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wyK-pZ-hEH">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="savePostDetail:" destination="54o-MH-cbR" eventType="touchUpInside" id="X3Q-r3-zUf"/>
+                                    <action selector="savePostDetail:" destination="biO-ba-qhw" eventType="touchUpInside" id="qGs-ej-Oq6"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -656,6 +661,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gdt-Ol-PzA"/>
-        <segue reference="SG1-8F-chJ"/>
     </inferredMetricsTieBreakers>
 </document>
