@@ -12,7 +12,6 @@ class ridePostViewController: UITableViewController {
     
     
     let ref = FIRDatabase.database().reference()
-    //var ridePosts:[ridePost] = postData
     
     @IBOutlet weak var spotField: UITextField!
     @IBOutlet weak var timeLabel: UILabel!
@@ -21,7 +20,6 @@ class ridePostViewController: UITableViewController {
     
     var posts: ridePost?
     var ridePosts:[ridePost] = postData
-    //let ref = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +40,9 @@ class ridePostViewController: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.stringFromDate(time)
         
-        //let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
-        print("werwerwer")
-        self.ref.child("users").setValue(["username": "Annn"])
-        FIRDatabase.database().reference().child("ridePost").child("time").setValue(spots)
+        let dict = ["spot":spots,"time":dateString]
+        
+        //FIRDatabase.database().reference().child("ridePost").child("time").setValue(dict)
         //ref.setValue(dict)
         // Write data to Firebase
         /*if let postViewController = segue.sourceViewController as? ridePostViewController {
