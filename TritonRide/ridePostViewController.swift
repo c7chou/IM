@@ -12,7 +12,7 @@ class ridePostViewController: UITableViewController {
     
     
     let ref = FIRDatabase.database().reference()
-    var ridePosts:[ridePost] = postData
+    //var ridePosts:[ridePost] = postData
     
     @IBOutlet weak var spotField: UITextField!
     @IBOutlet weak var timeLabel: UILabel!
@@ -21,7 +21,7 @@ class ridePostViewController: UITableViewController {
     
     var posts: ridePost?
     var ridePosts:[ridePost] = postData
-    let ref = FIRDatabase.database().reference()
+    //let ref = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
