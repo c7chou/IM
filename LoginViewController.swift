@@ -20,6 +20,8 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     var pickerData:[String] = ["Driver", "Rider"]
     var ref = FIRDatabase.database().reference()
+    var pickerValue:String
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,8 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         self.txtPassword.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
-
+    
+   
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -57,6 +60,13 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         return pickerData[row]
     }
 
+    func pickerView(picker: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        if(row = 0){
+            self.pickerValue = pickerData[0]
+        } else{
+            self.pickerValue = pickerData[1]
+        }
+    }
 
     @IBAction func loginTapped(sender: AnyObject) {
         let email = txtUsername.text
@@ -84,7 +94,6 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 //self.signedIn(FIRAuth.auth()?.currentUser)
             }*/
             self.performSegueWithIdentifier("LoggedInSegue", sender: self)
-
         }
     }
     /*
