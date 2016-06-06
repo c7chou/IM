@@ -42,24 +42,13 @@ class ridePostViewController: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.stringFromDate(time)
         
-        //let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
-        print("werwerwer")
-        self.ref.child("users").setValue(["username": "Annn"])
-        FIRDatabase.database().reference().child("ridePost").child("time").setValue(spots)
-        //ref.setValue(dict)
-        // Write data to Firebase
-        /*if let postViewController = segue.sourceViewController as? ridePostViewController {
-            
-            //add the new player to the players array
-            if let ridePost = postViewController.posts{
-                ridePosts.append(ridePost)
-                print(ridePost.spotAvail)
-                print(ridePost.time)
-                //update the tableView
-                let indexPath = NSIndexPath(forRow: ridePosts.count-1, inSection: 0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            }
-        }*/
+
+        //self.ref.child("time").setValue(["time": time])
+        self.ref.child("ridePost").child("time").setValue(dateString)
+        self.ref.child("ridePost").child("spotAvail").setValue(spots)
+        
+        
+
     }
 
     func datePickerChanged () {
