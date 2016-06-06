@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>577575686404-t3qf9oc7orbdkeh07l9gorasra1aruh7.apps.googleusercontent.com</string>
+	<string>222144159410-l4iilaqksd3o58kaog416ep8t3cbd4id.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.577575686404-t3qf9oc7orbdkeh07l9gorasra1aruh7</string>
+	<string>com.googleusercontent.apps.222144159410-l4iilaqksd3o58kaog416ep8t3cbd4id</string>
 	<key>API_KEY</key>
-	<string>AIzaSyChW0071vAAYRaKtNVqlwnMem0QOAMWWPw</string>
+	<string>AIzaSyBuhOavTr4QOpAD8xeGJv0EBSmDaputEiQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>577575686404</string>
+	<string>222144159410</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>IrrelevantMonkeys.TritonRide</string>
 	<key>PROJECT_ID</key>
-	<string>tritonride</string>
+	<string>irrevelantmonkeys</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tritonride.appspot.com</string>
+	<string>irrevelantmonkeys.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:577575686404:ios:b62cb0f8e00acf3d</string>
+	<string>1:222144159410:ios:b62cb0f8e00acf3d</string>
 	<key>DATABASE_URL</key>
-	<string>https://tritonride.firebaseio.com</string>
+	<string>https://irrevelantmonkeys.firebaseio.com</string>
 </dict>
 </plist>

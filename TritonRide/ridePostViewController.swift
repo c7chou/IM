@@ -9,13 +9,16 @@
 import UIKit
 import Firebase
 class ridePostViewController: UITableViewController {
-    var ridePosts:[ridePost] = postData
+   
     
     @IBOutlet weak var spotField: UITextField!
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
     var posts: ridePost?
+    var ridePosts:[ridePost] = postData
+    let ref = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,8 @@ class ridePostViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("error no good")
     }
+    
+    
     @IBAction func cancelPostView(segue:UIStoryboardSegue) {
     }
     
@@ -34,7 +39,11 @@ class ridePostViewController: UITableViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.stringFromDate(time)
         
-        //let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
+        let key = ref.child("post").childByAutoId().key
+    
+        
+        
+        let dict = ["spot":spots!,"time":dateString]
         //let ref = FIRDatabase.database().reference().child("ridePost").child("time").setValue(spots)
         //ref.setValue(dict)
         // Write data to Firebase
