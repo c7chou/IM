@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Outlets
     
@@ -22,11 +22,19 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.txtUsername.delegate = self
+        self.txtPassword.delegate = self
+        self.txtConfirmPassword.delegate = self
         // Do any additional setup after loading the view.
     }
     
-        
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        self.txtUsername.endEditing(true)
+        self.txtConfirmPassword.endEditing(true)
+        self.txtPassword.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,7 +88,7 @@ class SignUpViewController: UIViewController {
                     return
                 }
                 let successAlertController:UIAlertController = UIAlertController(title: "Sign Up Successfully", message: "Enjoy", preferredStyle: .Alert)
-                successAlertController.addAction(UIAlertAction(title: "OK", style: .Default , handler:{ action in self.performSegueWithIdentifier("LoginViewSegue", sender: self)}))
+                successAlertController.addAction(UIAlertAction(title: "OK", style: .Default , handler:{ action in self.performSegueWithIdentifier("signedUpToLoginSegue", sender: self)}))
                 self.presentViewController (successAlertController, animated: true, completion: nil)
             }
         }

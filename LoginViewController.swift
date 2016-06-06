@@ -9,19 +9,22 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
 
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var picker: UIPickerView!
     
+    
+    
     var pickerData:[String] = ["Driver", "Rider"]
     var ref = FIRDatabase.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.txtUsername.delegate = self
+        self.txtPassword.delegate = self
         self.picker.delegate = self
         self.picker.dataSource = self
 
@@ -33,7 +36,12 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        self.txtUsername.endEditing(true)
+        self.txtPassword.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -54,16 +62,16 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let email = txtUsername.text
         let password = txtPassword.text
         self.activityIndicator.startAnimating()
-        FIRAuth.auth()?.createUserWithEmail(email!, password: password!) { (user, error) in
+        FIRAuth.auth()?.signInWithEmail(email!, password: password!) { (user, error) in
+            self.activityIndicator.stopAnimating()
             if let error = error {
-                self.activityIndicator.stopAnimating()
                 let alertController:UIAlertController = UIAlertController(title: "Login Failed",message: error.localizedDescription , preferredStyle: .Alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .Default , handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
-            let changeRequest = user!.profileChangeRequest()
-            changeRequest.displayName = user!.email!.componentsSeparatedByString("@")[0]
-            changeRequest.commitChangesWithCompletion(){ (error) in
+            /*let changeRequest = user?.profileChangeRequest()
+            changeRequest!.displayName = user!.email!.componentsSeparatedByString("@")[0]
+            changeRequest!.commitChangesWithCompletion(){ (error) in
                 self.activityIndicator.stopAnimating()
                 if let error = error {
                     print(error.localizedDescription)
@@ -74,7 +82,9 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 CurrentUser.sharedInstance.name = user?.displayName
                 CurrentUser.sharedInstance.signIn = true
                 //self.signedIn(FIRAuth.auth()?.currentUser)
-            }
+            }*/
+            self.performSegueWithIdentifier("LoggedInSegue", sender: self)
+
         }
     }
     /*

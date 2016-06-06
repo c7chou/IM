@@ -9,14 +9,15 @@
 import Foundation
 import Firebase
 
-struct CurrentUser {
+class CurrentUser:NSObject {
     
-    static var sharedInstance = CurrentUser()
+    static let sharedInstance = CurrentUser()
     
     var uid: String? = nil
     var email: String? = nil
     var name: String? = nil
-    var signIn = false
+    var signIn: Bool = false
     var driverOrRider: String? = nil
+
     
 }
