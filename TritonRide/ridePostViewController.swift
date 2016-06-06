@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 class ridePostViewController: UITableViewController {
+    
+    
+    let ref = FIRDatabase.database().reference()
     var ridePosts:[ridePost] = postData
     
     @IBOutlet weak var spotField: UITextField!
@@ -35,7 +38,9 @@ class ridePostViewController: UITableViewController {
         let dateString = dateFormatter.stringFromDate(time)
         
         //let dict:Dictionary<String,AnyObject>=["spot":spots!,"time":dateString]
-        //let ref = FIRDatabase.database().reference().child("ridePost").child("time").setValue(spots)
+        print("werwerwer")
+        self.ref.child("users").setValue(["username": "Annn"])
+        FIRDatabase.database().reference().child("ridePost").child("time").setValue(spots)
         //ref.setValue(dict)
         // Write data to Firebase
         /*if let postViewController = segue.sourceViewController as? ridePostViewController {
