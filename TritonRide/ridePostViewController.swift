@@ -33,6 +33,7 @@ class ridePostViewController: UITableViewController {
     @IBAction func cancelPostView(segue:UIStoryboardSegue) {
     }
     
+    
     @IBAction func savePostDetail(sender:UIButton) {
         let spots = spotField.text
         let time = datePicker.date
@@ -42,8 +43,10 @@ class ridePostViewController: UITableViewController {
         
 
         //self.ref.child("time").setValue(["time": time])
-        self.ref.child("ridePost").child("time").setValue(dateString)
-        self.ref.child("ridePost").child("spotAvail").setValue(spots)
+        let key = self.ref.child("ridePost").childByAutoId().key
+        let userId = CurrentUser.sharedInstance.email!.componentsSeparatedByString("@")[0]
+       self.ref.child("ridePost").child(userId).child(key).child("time").setValue(dateString)
+        self.ref.child("ridePost").child(userId).child(key).child("spotAvail").setValue(spots)
         
         
 
