@@ -29,6 +29,6 @@ struct ridePost{
         self.riders = riders
         let dic: Dictionary<String, AnyObject>= ["driver":self.name!,"plate":self.plate!,"spots":self.spotAvail!,"riders":self.riders!,"time":self.time!]
         print("saving to firebase")
-        self.ref.child("tritonride/").setValue(dic)
+        //self.ref.child("tritonride/").setValue(dic)
     }
 }
