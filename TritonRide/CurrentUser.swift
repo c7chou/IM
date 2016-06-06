@@ -17,7 +17,6 @@ class CurrentUser:NSObject {
     var email: String? = nil
     var name: String? = nil
     var signIn: Bool = false
-    var driverOrRider: String? = nil
 
     
 }

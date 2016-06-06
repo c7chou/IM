@@ -11,6 +11,8 @@ import MapKit
 import CoreLocation
 import AddressBookUI
 import GoogleMaps
+import Firebase
+
 class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     
@@ -45,6 +47,16 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
         locationManager.requestLocation()
         
         geoCoder = CLGeocoder()
+        
+        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            if let user = user {
+                CurrentUser.sharedInstance.name = user.displayName
+                CurrentUser.sharedInstance.signIn = true
+                CurrentUser.sharedInstance.email = user.email
+                CurrentUser.sharedInstance.uid = user.uid
+                
+            }
+        }
         
     }
     
