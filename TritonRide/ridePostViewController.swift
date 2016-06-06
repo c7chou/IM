@@ -18,7 +18,10 @@ class ridePostViewController: UITableViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
     var posts: ridePost?
+    var ridePosts:[ridePost] = postData
+    let ref = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,8 @@ class ridePostViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("error no good")
     }
+    
+    
     @IBAction func cancelPostView(segue:UIStoryboardSegue) {
     }
     

@@ -20,9 +20,9 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     var pickerData:[String] = ["Driver", "Rider"]
     var ref = FIRDatabase.database().reference()
-    var pickerValue:String = ""
-
-
+    
+    var pickerValue: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.txtUsername.delegate = self
