@@ -93,7 +93,11 @@ class LoginViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 CurrentUser.sharedInstance.signIn = true
                 //self.signedIn(FIRAuth.auth()?.currentUser)
             }*/
-            self.performSegueWithIdentifier("LoggedInSegue", sender: self)
+            if( self.pickerValue == self.pickerData[1]){
+                self.performSegueWithIdentifier("LoggedInRiderSegue", sender: self)
+            } else {
+                self.performSegueWithIdentifier("LoggedInDriverSegue", sender: self)
+            }
         }
     }
     /*
