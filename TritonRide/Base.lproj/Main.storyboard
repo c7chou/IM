@@ -616,10 +616,12 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wyK-pZ-hEH">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="savePostDetail:" destination="54o-MH-cbR" eventType="touchUpInside" id="X3Q-r3-zUf"/>
                                     <action selector="savePostDetail:" destination="biO-ba-qhw" eventType="touchUpInside" id="qGs-ej-Oq6"/>
+                                    <segue destination="CF4-e0-kuA" kind="presentation" id="gIZ-tB-Tpv"/>
                                 </connections>
                             </button>
                             <connections>
@@ -658,12 +660,135 @@
             </objects>
             <point key="canvasLocation" x="1390.5" y="-1446.5"/>
         </scene>
+        <!--Triton Ride-->
+        <scene sceneID="bai-cP-GP1">
+            <objects>
+                <tableViewController id="oa1-Id-rVX" customClass="driverConfirmViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="B02-Fd-71o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Pick up location" id="UZb-XR-PFW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sLx-au-pBZ">
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sLx-au-pBZ" id="zOE-Wt-NA0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-mT-DGa">
+                                                    <rect key="frame" x="8" y="8" width="350" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Time" id="w9b-f5-VBR">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="5UY-IM-G3I">
+                                        <rect key="frame" x="0.0" y="207.5" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5UY-IM-G3I" id="YTi-Dz-j5Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op6-03-uWh">
+                                                    <rect key="frame" x="8" y="8" width="359" height="23.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Riders" id="TkD-b1-YIv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="QQU-kh-GJa">
+                                        <rect key="frame" x="0.0" y="297.5" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQU-kh-GJa" id="O01-m4-OgG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6F-tc-29L">
+                                                    <rect key="frame" x="8" y="8" width="359" height="23.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="oa1-Id-rVX" id="Ty6-b1-T1y"/>
+                            <outlet property="delegate" destination="oa1-Id-rVX" id="efh-17-HmJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Triton Ride" id="Uc6-t7-Rr1">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="UR9-KW-KJd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fBX-cR-McS">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="End Ride"/>
+                                <connections>
+                                    <segue destination="1yp-xg-XZV" kind="unwind" unwindAction="endRide:" id="e1P-Fe-Tae"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="endRide:" destination="5s9-Wm-jxn" id="Zmr-eJ-K1c"/>
+                                <segue destination="lC6-TQ-SjV" kind="showDetail" id="kfC-iG-hQh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="DNs-mT-DGa" id="zu6-BX-dbr"/>
+                        <outlet property="pickupTimeLabel" destination="Op6-03-uWh" id="pqe-Q4-6x6"/>
+                        <outlet property="rideLabel" destination="l6F-tc-29L" id="fIg-Ex-KQA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5s9-Wm-jxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1yp-xg-XZV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2925.5" y="-1446.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xZO-te-ekA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CF4-e0-kuA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sX1-Kx-NbY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oa1-Id-rVX" kind="relationship" relationship="rootViewController" id="mqq-vi-v4q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sx8-oi-VMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449.5" y="-1454.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Players" width="30" height="30"/>
         <image name="TritonRide" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zm6-lf-umc"/>
         <segue reference="gdt-Ol-PzA"/>
     </inferredMetricsTieBreakers>
 </document>

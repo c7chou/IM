@@ -30,8 +30,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //print("I;m here ")
+
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
 
@@ -129,6 +128,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, MKMap
                 print("Place name \(place.name)")
                 print("Place address \(place.formattedAddress)")
                 print("Place attributions \(place.attributions)")
+                CurrentUser.sharedInstance.placeSelected = place.name
             } else {
                 print("No place selected")
             }
