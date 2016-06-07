@@ -17,13 +17,13 @@
 		653E69681D04C32A00007AA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E69671D04C32A00007AA9 /* LoginViewController.swift */; };
 		653E696A1D04C6C400007AA9 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E69691D04C6C400007AA9 /* CurrentUser.swift */; };
 		657E026F1D04A72500376D8F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E026E1D04A72500376D8F /* SignUpViewController.swift */; };
-		658044341D069E3F0050D7F9 /* postsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658044331D069E3F0050D7F9 /* postsCell.swift */; };
 		65D193691D04001D0071E3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D193681D04001D0071E3A9 /* AppDelegate.swift */; };
 		65D1936E1D04001D0071E3A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1936C1D04001D0071E3A9 /* Main.storyboard */; };
 		65D193711D04001D0071E3A9 /* TritonRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65D1936F1D04001D0071E3A9 /* TritonRide.xcdatamodeld */; };
 		65D193731D04001D0071E3A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D193721D04001D0071E3A9 /* Assets.xcassets */; };
 		65D193801D0403900071E3A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D1937F1D0403900071E3A9 /* MapKit.framework */; };
 		65D193821D0403CB0071E3A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D193811D0403CB0071E3A9 /* CoreLocation.framework */; };
+		65E568541D06D5FB00AC4F51 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E568531D06D5FB00AC4F51 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		653E69671D04C32A00007AA9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		653E69691D04C6C400007AA9 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		657E026E1D04A72500376D8F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		658044331D069E3F0050D7F9 /* postsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postsCell.swift; sourceTree = "<group>"; };
 		65D193651D04001D0071E3A9 /* TritonRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TritonRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D193681D04001D0071E3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D1936D1D04001D0071E3A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		65D193721D04001D0071E3A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65D1937F1D0403900071E3A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		65D193811D0403CB0071E3A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		65E568531D06D5FB00AC4F51 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		F767215B22B11528C6B82495 /* Pods_TritonRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TritonRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,7 @@
 		65369A931D067CD7008CEDF4 /* Ride */ = {
 			isa = PBXGroup;
 			children = (
-				658044331D069E3F0050D7F9 /* postsCell.swift */,
-				352FDCD81D040B62004AF677 /* rideTimeViewController.swift */,
+				65E568531D06D5FB00AC4F51 /* PostCell.swift */,
 			);
 			name = Ride;
 			sourceTree = "<group>";
@@ -127,6 +126,7 @@
 				653E69671D04C32A00007AA9 /* LoginViewController.swift */,
 				657E026E1D04A72500376D8F /* SignUpViewController.swift */,
 				352FDCE21D040BF5004AF677 /* LocationViewController.swift */,
+				352FDCD81D040B62004AF677 /* rideTimeViewController.swift */,
 				65369A941D067D1B008CEDF4 /* object */,
 				65369A931D067CD7008CEDF4 /* Ride */,
 				65369A921D067CAA008CEDF4 /* Driver */,
@@ -182,7 +182,7 @@
 				TargetAttributes = {
 					65D193641D04001D0071E3A9 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = PJXY7Y63DH;
+						DevelopmentTeam = SG8TTYF2EZ;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -280,8 +280,8 @@
 				65D193691D04001D0071E3A9 /* AppDelegate.swift in Sources */,
 				657E026F1D04A72500376D8F /* SignUpViewController.swift in Sources */,
 				352FDCE31D040BF5004AF677 /* LocationViewController.swift in Sources */,
-				658044341D069E3F0050D7F9 /* postsCell.swift in Sources */,
 				65D193711D04001D0071E3A9 /* TritonRide.xcdatamodeld in Sources */,
+				65E568541D06D5FB00AC4F51 /* PostCell.swift in Sources */,
 				65369A911D065F7C008CEDF4 /* Post.swift in Sources */,
 				653E69681D04C32A00007AA9 /* LoginViewController.swift in Sources */,
 				35249AE31D065689005C439A /* driverConfirmViewController.swift in Sources */,
