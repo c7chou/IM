@@ -23,7 +23,7 @@ class rideTimeViewController: UITableViewController {
             for item in snapshot.children{
                 let driver = item.value!["driver"] as! String
                 let time = item.value!["time"] as! String
-                let spots = item.value!["spotAvail"] as! Int
+                let spots = item.value!["spotAvail"] as! String
                 let location = item.value!["location"] as! String
                 let newPost = Post(driver: driver, time: time, spots: spots, location: location)
                 self.postList.append(newPost!)
@@ -60,6 +60,10 @@ class rideTimeViewController: UITableViewController {
             
             let posting = postList[indexPath.row] as Post
             cell.postings = posting
+            print(cell.postings.driver)
+            print(cell.postings.time)
+            print(cell.postings.location)
+            print(cell.postings.spots)
             return cell
     }
     
