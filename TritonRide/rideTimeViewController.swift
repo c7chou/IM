@@ -7,10 +7,35 @@
 //
 
 import UIKit
+import Firebase
 
 class rideTimeViewController: UITableViewController {
     var times:[rideTime] = timesData
     
+    let ref = FIRDatabase.database().reference()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.ref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.ref.observeEventType(.Value, withBlock: { snapshot in
+            //for user in snapshot.children{
+               // var userName = user
+            
+         
+            
+        })
+        
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

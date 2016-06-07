@@ -20,6 +20,7 @@
 		355EF8301D0623BC00E813F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EF82F1D0623BC00E813F7 /* ViewController.swift */; };
 		3565C4151D06280B00447886 /* ridePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565C4141D06280B00447886 /* ridePostViewController.swift */; };
 		65049BAF1D063277005EAB45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65049BAE1D063277005EAB45 /* GoogleService-Info.plist */; };
+		65369A911D065F7C008CEDF4 /* PostInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65369A901D065F7C008CEDF4 /* PostInformation.swift */; };
 		653E69681D04C32A00007AA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E69671D04C32A00007AA9 /* LoginViewController.swift */; };
 		653E696A1D04C6C400007AA9 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E69691D04C6C400007AA9 /* CurrentUser.swift */; };
 		657E026F1D04A72500376D8F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E026E1D04A72500376D8F /* SignUpViewController.swift */; };
@@ -47,6 +48,7 @@
 		3565C4141D06280B00447886 /* ridePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ridePostViewController.swift; sourceTree = "<group>"; };
 		4E94D2B842440A3F4B254704 /* Pods-TritonRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TritonRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-TritonRide/Pods-TritonRide.release.xcconfig"; sourceTree = "<group>"; };
 		65049BAE1D063277005EAB45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65369A901D065F7C008CEDF4 /* PostInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInformation.swift; sourceTree = "<group>"; };
 		653E69671D04C32A00007AA9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		653E69691D04C6C400007AA9 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		657E026E1D04A72500376D8F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				65D193681D04001D0071E3A9 /* AppDelegate.swift */,
 				352FDCD61D040B56004AF677 /* driverCell.swift */,
 				653E69691D04C6C400007AA9 /* CurrentUser.swift */,
+				65369A901D065F7C008CEDF4 /* PostInformation.swift */,
 				352FDCD81D040B62004AF677 /* rideTimeViewController.swift */,
 				352FDCD91D040B62004AF677 /* rideDriverViewController.swift */,
 				3527645A1D061DE200F5BD2E /* ridePost.swift */,
@@ -277,6 +280,7 @@
 				352FDCE31D040BF5004AF677 /* LocationViewController.swift in Sources */,
 				352FDCE71D040BFB004AF677 /* rideTime.swift in Sources */,
 				65D193711D04001D0071E3A9 /* TritonRide.xcdatamodeld in Sources */,
+				65369A911D065F7C008CEDF4 /* PostInformation.swift in Sources */,
 				352764591D05EB7C00F5BD2E /* Constants.swift in Sources */,
 				352FDCE61D040BFB004AF677 /* timeData.swift in Sources */,
 				653E69681D04C32A00007AA9 /* LoginViewController.swift in Sources */,
