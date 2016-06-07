@@ -38,12 +38,12 @@ class ridePostViewController: UITableViewController {
         let spots = spotField.text
         let time = timeLabel.text
 
-        let key = self.ref.child("ridePost").childByAutoId().key
+        let key = self.ref.childByAutoId().key
         let userId = CurrentUser.sharedInstance.email!.componentsSeparatedByString("@")[0]
-        self.ref.child("ridePost").child(key).child("driver").setValue(userId)
-        self.ref.child("ridePost").child(key).child("time").setValue(time)
-        self.ref.child("ridePost").child(key).child("spotAvail").setValue(spots)
-        self.ref.child("ridePost").child(key).child("location").setValue(self.location)
+        self.ref.child(key).child("driver").setValue(userId)
+        self.ref.child(key).child("time").setValue(time)
+        self.ref.child(key).child("spotAvail").setValue(spots)
+        self.ref.child(key).child("location").setValue(self.location)
         
         
         CurrentUser.sharedInstance.time = timeLabel.text

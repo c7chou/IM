@@ -9,17 +9,19 @@
 import Foundation
 import Firebase
 
-struct PostInformation{
+class Post{
     var driver:String?
     var time:String?
     var spots:Int
+    var location:String?
    // let ref:Firebase?
     
     
-    init( driver:String, time:String, spots:Int){
+    init?( driver:String, time:String, spots:Int, location:String){
         self.driver = driver
         self.time = time
         self.spots = spots
+        self.location = location
      //   self.ref = nil
     }
    /* init(snapshot: FDataSnapshot) {
