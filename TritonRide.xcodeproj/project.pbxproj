@@ -12,6 +12,8 @@
 		352FDCDC1D040B62004AF677 /* rideTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCD81D040B62004AF677 /* rideTimeViewController.swift */; };
 		352FDCE31D040BF5004AF677 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FDCE21D040BF5004AF677 /* LocationViewController.swift */; };
 		3565C4151D06280B00447886 /* ridePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565C4141D06280B00447886 /* ridePostViewController.swift */; };
+		35AB171F1D06B3AB00998155 /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB171E1D06B3AB00998155 /* postCell.swift */; };
+		35AB17211D06BC0900998155 /* riderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB17201D06BC0900998155 /* riderViewController.swift */; };
 		65049BAF1D063277005EAB45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65049BAE1D063277005EAB45 /* GoogleService-Info.plist */; };
 		65369A911D065F7C008CEDF4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65369A901D065F7C008CEDF4 /* Post.swift */; };
 		653E69681D04C32A00007AA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E69671D04C32A00007AA9 /* LoginViewController.swift */; };
@@ -33,6 +35,8 @@
 		352FDCE01D040BCC004AF677 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		352FDCE21D040BF5004AF677 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		3565C4141D06280B00447886 /* ridePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ridePostViewController.swift; sourceTree = "<group>"; };
+		35AB171E1D06B3AB00998155 /* postCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
+		35AB17201D06BC0900998155 /* riderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = riderViewController.swift; sourceTree = "<group>"; };
 		4E94D2B842440A3F4B254704 /* Pods-TritonRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TritonRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-TritonRide/Pods-TritonRide.release.xcconfig"; sourceTree = "<group>"; };
 		65049BAE1D063277005EAB45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65369A901D065F7C008CEDF4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				65D193681D04001D0071E3A9 /* AppDelegate.swift */,
 				653E69671D04C32A00007AA9 /* LoginViewController.swift */,
 				657E026E1D04A72500376D8F /* SignUpViewController.swift */,
+				35AB171E1D06B3AB00998155 /* postCell.swift */,
 				352FDCE21D040BF5004AF677 /* LocationViewController.swift */,
 				352FDCD81D040B62004AF677 /* rideTimeViewController.swift */,
 				65369A941D067D1B008CEDF4 /* object */,
@@ -285,7 +290,9 @@
 				65369A911D065F7C008CEDF4 /* Post.swift in Sources */,
 				653E69681D04C32A00007AA9 /* LoginViewController.swift in Sources */,
 				35249AE31D065689005C439A /* driverConfirmViewController.swift in Sources */,
+				35AB17211D06BC0900998155 /* riderViewController.swift in Sources */,
 				653E696A1D04C6C400007AA9 /* CurrentUser.swift in Sources */,
+				35AB171F1D06B3AB00998155 /* postCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

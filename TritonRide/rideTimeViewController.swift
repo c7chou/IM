@@ -68,6 +68,7 @@ class rideTimeViewController: UITableViewController  {
             print(cell.postings.spots)
             return cell
     }
+
     
     
 

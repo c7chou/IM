@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostCell: UITableViewCell {
+class postCell: UITableViewCell {
     @IBOutlet weak var driverSlot: UILabel!
     @IBOutlet weak var timeSlot: UILabel!
     @IBOutlet weak var spotSlot: UILabel!
