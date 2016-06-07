@@ -18,12 +18,14 @@ class rideTimeViewController: UITableViewController {
        
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource=self
         self.ref.observeEventType(.Value, withBlock: { (snapshot) in
             print(snapshot.value)
             for item in snapshot.children{
                 let driver = item.value!["driver"] as! String
                 let time = item.value!["time"] as! String
-                let spots = item.value!["spotAvail"] as! Int
+                let spots = item.value!["spotAvail"] as! String
                 let location = item.value!["location"] as! String
                 let newPost = Post(driver: driver, time: time, spots: spots, location: location)
                 self.postList.append(newPost!)
@@ -53,15 +55,15 @@ class rideTimeViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postList.count
     }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
-        -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! postCell
-            
-            let posting = postList[indexPath.row] as Post
-            cell.postings = posting
-            return cell
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print("peeee")
+        let cell = tableView.dequeueReusableCellWithIdentifier("postsCell", forIndexPath: indexPath) as! PostCell
+        let posting = postList[indexPath.row] as Post
+        cell.postings = posting
+        return cell
     }
+
     
     
 

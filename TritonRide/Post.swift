@@ -12,12 +12,12 @@ import Firebase
 class Post{
     var driver:String?
     var time:String?
-    var spots:Int
+    var spots:String?
     var location:String?
    // let ref:Firebase?
     
     
-    init?( driver:String, time:String, spots:Int, location:String){
+    init?( driver:String, time:String, spots:String, location:String){
         self.driver = driver
         self.time = time
         self.spots = spots
