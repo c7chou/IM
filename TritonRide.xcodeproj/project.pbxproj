@@ -90,6 +90,8 @@
 		65369A931D067CD7008CEDF4 /* Ride */ = {
 			isa = PBXGroup;
 			children = (
+				352FDCD81D040B62004AF677 /* rideTimeViewController.swift */,
+				35AB17201D06BC0900998155 /* riderViewController.swift */,
 				65E568531D06D5FB00AC4F51 /* PostCell.swift */,
 			);
 			name = Ride;
