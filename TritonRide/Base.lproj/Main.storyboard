@@ -466,6 +466,98 @@
             </objects>
             <point key="canvasLocation" x="1332.5" y="-430.5"/>
         </scene>
+        <!--TritonRide-->
+        <scene sceneID="y9J-hs-ZMw">
+            <objects>
+                <tableViewController id="P78-ax-gKO" customClass="rideDriverViewController" customModule="TritonRide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="1k3-Lb-ano">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="driverCell" rowHeight="60" id="g9A-vM-J2l" customClass="driverCell" customModule="TritonRide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9A-vM-J2l" id="AmC-eq-FFm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7E-Os-8gp">
+                                            <rect key="frame" x="14" y="31" width="100" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsj-ZC-cdj">
+                                            <rect key="frame" x="14" y="2" width="100" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqX-UV-B8K">
+                                            <rect key="frame" x="296" y="2" width="71" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-cx-ZqU">
+                                            <rect key="frame" x="296" y="24" width="55" height="30"/>
+                                            <state key="normal" title="Sign Up"/>
+                                            <connections>
+                                                <segue destination="LHm-HX-7OT" kind="presentation" id="gdt-Ol-PzA"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="rsj-ZC-cdj" id="Aza-OQ-Gwi"/>
+                                    <outlet property="plateLabel" destination="P7E-Os-8gp" id="bEF-7o-7S6"/>
+                                    <outlet property="spotLabel" destination="mqX-UV-B8K" id="v4B-h1-G3B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P78-ax-gKO" id="XSO-lh-keE"/>
+                            <outlet property="delegate" destination="P78-ax-gKO" id="f2C-bq-P7Z"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="TritonRide" id="QPz-1Y-KX2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="CX0-3m-plB">
+                            <connections>
+                                <action selector="cancelDriver:" destination="JOC-PW-sPq" id="s8Q-hU-c55"/>
+                                <segue destination="fb1-wd-eIx" kind="unwind" unwindAction="cancelDriver:" id="XYu-mF-83D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOC-PW-sPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fb1-wd-eIx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2790.5" y="-430.5"/>
+        </scene>
+        <!--TritonRide-->
+        <scene sceneID="Pjs-4Q-Yor">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgG-jC-yKh" userLabel="TritonRide" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Players" image="Players" id="MDj-ef-GQ9"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1YX-ds-o0S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P78-ax-gKO" kind="relationship" relationship="rootViewController" id="P04-qm-lmK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2p-47-BZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298.5" y="-430.5"/>
+        </scene>
         <!--Triton Ride-->
         <scene sceneID="dXD-3s-MAD">
             <objects>
