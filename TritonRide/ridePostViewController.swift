@@ -43,6 +43,10 @@ class ridePostViewController: UITableViewController {
         self.ref.child("ridePost").child(key).child("driver").setValue(userId)
         self.ref.child("ridePost").child(key).child("time").setValue(time)
         self.ref.child("ridePost").child(key).child("spotAvail").setValue(spots)
+        self.ref.child("ridePost").child(key).child("location").setValue(self.location)
+        
+        
+        CurrentUser.sharedInstance.time = timeLabel.text
     }
 
     func datePickerChanged () {

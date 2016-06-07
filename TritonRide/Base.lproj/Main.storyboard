@@ -742,7 +742,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="End Ride"/>
                                 <connections>
-                                    <segue destination="1yp-xg-XZV" kind="unwind" unwindAction="endRide:" id="e1P-Fe-Tae"/>
+                                    <segue destination="lC6-TQ-SjV" kind="show" id="1tH-uA-HnO"/>
                                 </connections>
                             </button>
                             <connections>
@@ -759,9 +759,8 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5s9-Wm-jxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1yp-xg-XZV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2925.5" y="-1446.5"/>
+            <point key="canvasLocation" x="2849.5" y="-1428.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xZO-te-ekA">
@@ -788,7 +787,7 @@
         <image name="TritonRide" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zm6-lf-umc"/>
         <segue reference="gdt-Ol-PzA"/>
+        <segue reference="kfC-iG-hQh"/>
     </inferredMetricsTieBreakers>
 </document>
