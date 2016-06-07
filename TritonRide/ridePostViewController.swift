@@ -40,8 +40,9 @@ class ridePostViewController: UITableViewController {
 
         let key = self.ref.child("ridePost").childByAutoId().key
         let userId = CurrentUser.sharedInstance.email!.componentsSeparatedByString("@")[0]
-        self.ref.child("ridePost").child(key).child(userId).child("time").setValue(dateString)
-        self.ref.child("ridePost").child(key).child(userId).child("spotAvail").setValue(spots)
+        self.ref.child("ridePost").child(key).child("driver").setValue(userId)
+        self.ref.child("ridePost").child(key).child("time").setValue(time)
+        self.ref.child("ridePost").child(key).child("spotAvail").setValue(spots)
     }
 
     func datePickerChanged () {

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class rideTimeViewController: UITableViewController {
-    var times:[rideTime] = timesData
+    //var times:[rideTime] = timesData
     
     let ref = FIRDatabase.database().reference()
     
@@ -41,6 +41,7 @@ class rideTimeViewController: UITableViewController {
         return 1
     }
     
+    /*
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return times.count
     }
@@ -52,7 +53,7 @@ class rideTimeViewController: UITableViewController {
             let time = times[indexPath.row] as rideTime
             cell.textLabel?.text = time.time
             return cell
-    }
+    }*/
     
     
 
