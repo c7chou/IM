@@ -15,20 +15,20 @@ class ridePostViewController: UITableViewController {
     
     @IBOutlet weak var spotField: UITextField!
     @IBOutlet weak var timeLabel: UILabel!
-    
+
     @IBOutlet weak var datePicker: UIDatePicker!
-    
-    var posts: ridePost?
-    var ridePosts:[ridePost] = postData
+   
+    let location = CurrentUser.sharedInstance.placeSelected
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         datePickerChanged()
+        
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("error no good")
     }
-    
     
     @IBAction func cancelPostView(segue:UIStoryboardSegue) {
     }
@@ -36,13 +36,8 @@ class ridePostViewController: UITableViewController {
     
     @IBAction func savePostDetail(sender:UIButton) {
         let spots = spotField.text
-        let time = datePicker.date
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.stringFromDate(time)
-        
+        let time = timeLabel.text
 
-        //self.ref.child("time").setValue(["time": time])
         let key = self.ref.child("ridePost").childByAutoId().key
         let userId = CurrentUser.sharedInstance.email!.componentsSeparatedByString("@")[0]
         self.ref.child("ridePost").child(key).child(userId).child("time").setValue(dateString)
